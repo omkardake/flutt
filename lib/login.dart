@@ -22,14 +22,14 @@ class _MyLoginState extends State<MyLogin> with TickerProviderStateMixin {
         appBar: AppBar(
             toolbarHeight: 50,
             flexibleSpace: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   gradient: LinearGradient(colors: [
                 Color.fromARGB(255, 243, 150, 45),
                 Color.fromARGB(255, 246, 90, 62),
               ])),
             )),
         body: Padding(
-          padding: const EdgeInsets.all(15.0),
+          padding: const EdgeInsets.all(25.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -40,8 +40,8 @@ class _MyLoginState extends State<MyLogin> with TickerProviderStateMixin {
                 ),
                 controller: tabController,
                 isScrollable: true,
-                labelPadding: EdgeInsets.symmetric(horizontal: 30),
-                tabs: [
+                labelPadding: const EdgeInsets.symmetric(horizontal: 30),
+                tabs: const [
                   Tab(
                     child: Text(
                       "Log in",
@@ -61,31 +61,31 @@ class _MyLoginState extends State<MyLogin> with TickerProviderStateMixin {
                   SingleChildScrollView(
                     child: Column(
                       children: [
-                        Padding(padding: EdgeInsets.only(top: 100)),
-                        TextField(
+                        const Padding(padding: EdgeInsets.only(top: 100)),
+                        const TextField(
                           decoration: InputDecoration(
                             hintText: 'Mobile No.',
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 80,
                         ),
-                        TextField(
+                        const TextField(
                           obscureText: true,
                           decoration: InputDecoration(
                             hintText: 'Password',
                           ),
                         ),
-                        SizedBox(height: 100),
+                        const SizedBox(height: 100),
                         Container(
                           height: 50,
                           width: 200,
                           child: MaterialButton(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30)),
-                            color: Color.fromARGB(255, 246, 90, 62),
+                            color: const Color.fromARGB(255, 246, 90, 62),
                             onPressed: () {
-                              Navigator.pushNamed(context, '/profile');
+                              Navigator.pushNamed(context, '/btmnavbar');
                             },
                             child: const Text(
                               'LOG IN',
@@ -96,7 +96,7 @@ class _MyLoginState extends State<MyLogin> with TickerProviderStateMixin {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         TextButton(
@@ -117,38 +117,38 @@ class _MyLoginState extends State<MyLogin> with TickerProviderStateMixin {
                   SingleChildScrollView(
                     child: Column(
                       children: [
-                        Padding(padding: EdgeInsets.only(top: 50)),
-                        TextField(
+                        const Padding(padding: EdgeInsets.only(top: 50)),
+                        const TextField(
                           decoration: InputDecoration(
                             hintText: 'Mobile No.',
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         ),
-                        TextField(
+                        const TextField(
                           obscureText: true,
                           decoration: InputDecoration(
                             hintText: 'Password',
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 50,
                         ),
-                        TextField(
+                        const TextField(
                           obscureText: true,
                           decoration: InputDecoration(
                             hintText: ' Confirm Password',
                           ),
                         ),
-                        SizedBox(height: 80),
+                        const SizedBox(height: 80),
                         Container(
                           height: 50,
                           width: 200,
                           child: MaterialButton(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30)),
-                            color: Color.fromARGB(255, 246, 90, 62),
+                            color: const Color.fromARGB(255, 246, 90, 62),
                             onPressed: () {
                               Navigator.pushNamed(context, '/login');
                             },

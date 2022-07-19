@@ -1,7 +1,5 @@
-//import 'dart:html';
-
 import 'package:flutter/material.dart';
-//import 'package:furniturestore/main.dart';
+import 'package:online_furniture_store/main.dart';
 
 class ProductDescp extends StatefulWidget {
   const ProductDescp({Key? key}) : super(key: key);
@@ -19,7 +17,7 @@ class _ProductDescpState extends State<ProductDescp> {
         appBar: AppBar(
             toolbarHeight: 50,
             flexibleSpace: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   gradient: LinearGradient(colors: [
                 Color.fromARGB(255, 243, 150, 45),
                 Color.fromARGB(255, 246, 90, 62),
@@ -38,7 +36,7 @@ class _ProductDescpState extends State<ProductDescp> {
               Container(
                 height: 200,
                 width: 400,
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 child: Card(
                   shadowColor: Colors.black,
                   elevation: 10,
@@ -51,7 +49,7 @@ class _ProductDescpState extends State<ProductDescp> {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
+                        children: const [
                           Text(
                             'Chair',
                             style: TextStyle(
@@ -65,15 +63,9 @@ class _ProductDescpState extends State<ProductDescp> {
                             size: 45,
                             color: Colors.red,
                           )
-                          // Image.asset(
-                          //   'assets/heart.png',
-                          //   height: 40,
-                          //   width: 40,
-                          //   color: Color.fromARGB(255, 246, 90, 62),
-                          // )
                         ],
                       ),
-                      Divider(
+                      const Divider(
                         indent: 50,
                         endIndent: 200,
                         thickness: 3,
@@ -82,7 +74,7 @@ class _ProductDescpState extends State<ProductDescp> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Text(
+                          const Text(
                             "\$55",
                             style: TextStyle(
                               color: Colors.deepPurple,
@@ -97,7 +89,7 @@ class _ProductDescpState extends State<ProductDescp> {
                             child: MaterialButton(
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30)),
-                              color: Color.fromARGB(255, 246, 90, 62),
+                              color: const Color.fromARGB(255, 246, 90, 62),
                               onPressed: () {
                                 Navigator.pushNamed(context, '/card');
                               },
@@ -116,14 +108,14 @@ class _ProductDescpState extends State<ProductDescp> {
                   ),
                 ),
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               Padding(
-                padding: EdgeInsets.only(left: 20),
+                padding: const EdgeInsets.only(left: 20),
                 child: Column(
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
+                      children: const [
                         Icon(
                           Icons.shopping_bag_outlined,
                           size: 40,
@@ -138,7 +130,7 @@ class _ProductDescpState extends State<ProductDescp> {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     const Text(
@@ -146,14 +138,6 @@ class _ProductDescpState extends State<ProductDescp> {
                   ],
                 ),
               )
-              // Container(
-              //   child: (Text(
-              //     'Descriiption',
-
-              //     ),
-              //     textAlign: TextAlign.start,
-              //   )),
-              // )
             ],
           ),
         ),

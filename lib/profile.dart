@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+//import 'package:online_furniture_store/product_descp.dart';
+
 class MyProfile extends StatefulWidget {
   const MyProfile({Key? key}) : super(key: key);
 
@@ -16,7 +18,7 @@ class _MyProfileState extends State<MyProfile> {
         appBar: AppBar(
           toolbarHeight: 50,
           flexibleSpace: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 gradient: LinearGradient(colors: [
               Color.fromARGB(255, 243, 150, 45),
               Color.fromARGB(255, 246, 90, 62),
@@ -25,18 +27,18 @@ class _MyProfileState extends State<MyProfile> {
         ),
         body: Column(
           children: [
-            Padding(padding: EdgeInsets.only(top: 15)),
+            const Padding(padding: EdgeInsets.only(top: 15)),
             Image.asset(
               'assets/profileicon.png',
               height: 150,
               width: 150,
             ),
-            Text(
+            const Text(
               'USER NAME',
               style: TextStyle(fontSize: 20),
             ),
-            Text('Location'),
-            SizedBox(
+            const Text('Location'),
+            const SizedBox(
               height: 50,
             ),
             InkWell(
@@ -44,32 +46,36 @@ class _MyProfileState extends State<MyProfile> {
                 children: [
                   ListTile(
                     onTap: () {},
-                    title: Text('Messages'),
-                    leading: Icon(Icons.message_outlined),
+                    title: const Text('Messages'),
+                    leading: const Icon(Icons.message_outlined),
                   ),
                   ListTile(
                     onTap: () {
                       Navigator.pushNamed(context, '/notification');
                     },
-                    title: Text('Notifications'),
-                    leading: Icon(Icons.notifications_none),
+                    title: const Text('Notifications'),
+                    leading: const Icon(Icons.notifications_none),
                   ),
                   ListTile(
-                    onTap: () {},
-                    title: Text('Accounts Details'),
-                    leading: Icon(Icons.person_outlined),
+                    onTap: () {
+                      Navigator.pushNamed(context, '/topup');
+                    },
+                    title: const Text('Accounts Details'),
+                    leading: const Icon(Icons.person_outlined),
                   ),
                   ListTile(
                     onTap: () {
                       Navigator.pushNamed(context, '/product_descp');
                     },
-                    title: Text('My Purchases'),
-                    leading: Icon(Icons.shopping_cart_outlined),
+                    title: const Text('My Purchases'),
+                    leading: const Icon(Icons.shopping_cart_outlined),
                   ),
                   ListTile(
-                    onTap: () {},
-                    title: Text('Settings'),
-                    leading: Icon(Icons.settings_outlined),
+                    onTap: () {
+                      Navigator.pushNamed(context, '/filters');
+                    },
+                    title: const Text('Settings'),
+                    leading: const Icon(Icons.settings_outlined),
                   ),
                 ],
               ),

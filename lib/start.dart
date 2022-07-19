@@ -27,7 +27,7 @@ class _MyStartState extends State<MyStart> {
           ),
           child: Column(
             children: [
-              Padding(padding: EdgeInsets.only(top: 70)),
+              const Padding(padding: EdgeInsets.only(top: 70)),
               Container(
                 child: Text(
                   'ONLINE  FURNITURE \nSTORE',
@@ -39,7 +39,7 @@ class _MyStartState extends State<MyStart> {
                 ),
                 padding: EdgeInsets.only(top: 30),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Container(
                 child: Image.asset(
                   'assets/sofaa.png',

@@ -29,16 +29,23 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  get: ^4.6.5  
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  carousel_slider: ^4.1.1
+  
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_credit_card: ^3.0.1  
+  smooth_star_rating_null_safety: ^1.0.4+2
+  
+  
+  
+ 
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

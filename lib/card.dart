@@ -58,107 +58,109 @@ class _MyCardState extends State<MyCard> {
           ])),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.only(right: 30, left: 30),
-        child: Column(
-          children: [
-            Container(
-              padding: const EdgeInsets.only(top: 15),
-              height: 210,
-              width: 650,
-              child: Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                child: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      gradient: const LinearGradient(colors: [
-                        Color.fromARGB(255, 243, 150, 45),
-                        Color.fromARGB(255, 246, 90, 62),
-                      ])),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(right: 30, left: 30),
+          child: Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.only(top: 15),
+                height: 210,
+                width: 650,
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        gradient: const LinearGradient(colors: [
+                          Color.fromARGB(255, 243, 150, 45),
+                          Color.fromARGB(255, 246, 90, 62),
+                        ])),
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const Text('Add New Card',
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
-            const SizedBox(
-              height: 15,
-            ),
-            const TextField(
-              decoration: InputDecoration(
-                hintText: ' Card holder name',
+              const SizedBox(
+                height: 20,
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const TextField(
-              decoration: InputDecoration(
-                hintText: ' Card Number',
+              const Text('Add New Card',
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+              const SizedBox(
+                height: 15,
               ),
-            ),
-            const SizedBox(
-              height: 25,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                DropdownButton(
-                    hint: const Text("Year"),
-                    value: dropDownValueY,
-                    items: dropDownItemY
-                        .map((e) => DropdownMenuItem(
-                              child: Text(e),
-                              value: e,
-                            ))
-                        .toList(),
-                    onChanged: (value) {
-                      setState(() {
-                        dropDownValueY = value.toString();
-                      });
-                    }),
-                DropdownButton(
-                    hint: const Text("Month"),
-                    value: dropDownValueM,
-                    items: dropDownItemM
-                        .map((e) => DropdownMenuItem(
-                              child: Text(e),
-                              value: e,
-                            ))
-                        .toList(),
-                    onChanged: (value) {
-                      setState(() {
-                        dropDownValueM = value.toString();
-                      });
-                    }),
-              ],
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Container(
-              height: 50,
-              width: 200,
-              child: MaterialButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
-                color: Color.fromARGB(255, 246, 90, 62),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/');
-                },
-                child: const Text(
-                  'Add Now',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20),
+              const TextField(
+                decoration: InputDecoration(
+                  hintText: ' Card holder name',
                 ),
               ),
-            ),
-          ],
+              const SizedBox(
+                height: 20,
+              ),
+              const TextField(
+                decoration: InputDecoration(
+                  hintText: ' Card Number',
+                ),
+              ),
+              const SizedBox(
+                height: 25,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  DropdownButton(
+                      hint: const Text("Year"),
+                      value: dropDownValueY,
+                      items: dropDownItemY
+                          .map((e) => DropdownMenuItem(
+                                child: Text(e),
+                                value: e,
+                              ))
+                          .toList(),
+                      onChanged: (value) {
+                        setState(() {
+                          dropDownValueY = value.toString();
+                        });
+                      }),
+                  DropdownButton(
+                      hint: const Text("Month"),
+                      value: dropDownValueM,
+                      items: dropDownItemM
+                          .map((e) => DropdownMenuItem(
+                                child: Text(e),
+                                value: e,
+                              ))
+                          .toList(),
+                      onChanged: (value) {
+                        setState(() {
+                          dropDownValueM = value.toString();
+                        });
+                      }),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                height: 50,
+                width: 200,
+                child: MaterialButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30)),
+                  color: const Color.fromARGB(255, 246, 90, 62),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/');
+                  },
+                  child: const Text(
+                    'Add Now',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

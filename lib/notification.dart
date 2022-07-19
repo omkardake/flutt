@@ -8,6 +8,10 @@ class MyNotification extends StatefulWidget {
 }
 
 class _MyNotificationState extends State<MyNotification> {
+  bool _value1 = true;
+  bool _value2 = true;
+  bool _value3 = true;
+  bool _value4 = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +25,7 @@ class _MyNotificationState extends State<MyNotification> {
         flexibleSpace: Container(
           decoration: const BoxDecoration(
               gradient: LinearGradient(colors: [
-            Color.fromARGB(255, 243, 150, 45),
+            Color.fromARGB(255, 231, 155, 68),
             Color.fromARGB(255, 246, 90, 62),
           ])),
         ),
@@ -38,42 +42,65 @@ class _MyNotificationState extends State<MyNotification> {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15)),
               child: Column(
-                children: const [
-                  ListTile(
-                    title: Text('Product Updates'),
-                    subtitle: Text('omkmhufskjfbgfg'),
-                    // trailing: ,
-                  ),
-                  Divider(
+                children: [
+                  SwitchListTile(
+                      value: _value1,
+                      title: const Text("Product Updates"),
+                      subtitle: const Text("you get new product updates."),
+                      activeColor: const Color.fromARGB(255, 246, 90, 62),
+                      onChanged: (value) {
+                        setState(() {
+                          _value1 = value;
+                        });
+                      }),
+                  const Divider(
                     indent: 15,
                     endIndent: 15,
                     thickness: 2,
                     color: Colors.black26,
                   ),
-                  ListTile(
-                    title: Text('Comments'),
-                    subtitle: Text('omkmhufskjfbgfg'),
-                  ),
-                  Divider(
+                  SwitchListTile(
+                      value: _value2,
+                      title: const Text("Comments"),
+                      subtitle: const Text("you get users comments update."),
+                      activeColor: const Color.fromARGB(255, 246, 90, 62),
+                      onChanged: (value) {
+                        setState(() {
+                          _value2 = value;
+                        });
+                      }),
+                  const Divider(
                     indent: 15,
                     endIndent: 15,
                     thickness: 2,
                     color: Colors.black26,
                   ),
-                  ListTile(
-                    title: Text('Offer Updates'),
-                    subtitle: Text('omkmhufskjfbgfg'),
-                  ),
-                  Divider(
+                  SwitchListTile(
+                      value: _value3,
+                      title: const Text("Offer Updates"),
+                      subtitle: const Text("you get new offer updates here."),
+                      activeColor: const Color.fromARGB(255, 246, 90, 62),
+                      onChanged: (value) {
+                        setState(() {
+                          _value3 = value;
+                        });
+                      }),
+                  const Divider(
                     indent: 15,
                     endIndent: 15,
                     thickness: 2,
                     color: Colors.black26,
                   ),
-                  ListTile(
-                    title: Text('Notifications'),
-                    subtitle: Text('omkmhufskjfbgfg'),
-                  ),
+                  SwitchListTile(
+                      value: _value4,
+                      title: const Text("Notification"),
+                      subtitle: const Text("allow notifications or not."),
+                      activeColor: const Color.fromARGB(255, 246, 90, 62),
+                      onChanged: (value) {
+                        setState(() {
+                          _value4 = value;
+                        });
+                      }),
                 ],
               ),
             ),
@@ -87,7 +114,7 @@ class _MyNotificationState extends State<MyNotification> {
             child: MaterialButton(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30)),
-              color: Color.fromARGB(255, 246, 90, 62),
+              color: const Color.fromARGB(255, 246, 90, 62),
               onPressed: () {
                 showDialog(
                     context: context,
@@ -112,6 +139,9 @@ class _MyNotificationState extends State<MyNotification> {
                     fontSize: 20),
               ),
             ),
+          ),
+          const SizedBox(
+            height: 25,
           ),
         ],
       ),

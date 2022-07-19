@@ -13,17 +13,13 @@ class _MyVerifyState extends State<MyVerify> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          // leading: Icon(
-          //   Icons.arrow_back_ios,
-          //   size: 25,
-          // ),
-          title: Text(
+          title: const Text(
             'Verification',
             style: TextStyle(fontSize: 25),
           ),
           toolbarHeight: 100,
           flexibleSpace: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 gradient: LinearGradient(colors: [
               Color.fromARGB(255, 243, 150, 45),
               Color.fromARGB(255, 246, 90, 62),
@@ -79,12 +75,12 @@ class _MyVerifyState extends State<MyVerify> {
                         fontSize: 20,
                       ),
                     ),
-                    color: Color.fromARGB(255, 246, 90, 62),
+                    color: const Color.fromARGB(255, 246, 90, 62),
                     minWidth: 350,
                     height: 60,
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(
-                        Radius.circular(30.0), // Change your border radius here
+                        Radius.circular(30.0),
                       ),
                     ),
                   ),
@@ -106,24 +102,24 @@ class _MyVerifyState extends State<MyVerify> {
               if (value.length == 1 && first == true) {
                 FocusScope.of(context).nextFocus();
               }
-              if (value.length == 0 && first == true && last == false) {
+              if (value.isEmpty && first == true && last == false) {
                 FocusScope.of(context).previousFocus();
               }
             },
             showCursor: false,
             readOnly: false,
             textAlign: TextAlign.center,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
             keyboardType: TextInputType.number,
             maxLength: 1,
             decoration: InputDecoration(
-              counter: Offstage(),
+              counter: const Offstage(),
               enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(width: 2, color: Colors.black12),
+                borderSide: const BorderSide(width: 2, color: Colors.black12),
                 borderRadius: BorderRadius.circular(12),
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(
+                borderSide: const BorderSide(
                   width: 2,
                   color: Color.fromARGB(255, 246, 90, 62),
                 ),
